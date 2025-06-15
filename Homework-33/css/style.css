@@ -1,0 +1,36 @@
+.some-text {
+    font-family: "open-sans", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    text-decoration: line-through;
+
+}
+
+.text-one {
+    font-family: "open-sans", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+    
+
+}
+
+.text-two {
+    word-spacing: 30px;
+    color: rgb(0, 0, 255);
+    text-decoration-style: wavy;
+    text-decoration-line: overline;
+    
+}
+
+.text-three {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
