@@ -1,0 +1,26 @@
+
+
+.block {
+-webkit-box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+-moz-box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+border-radius: 30px;
+display: inline-block;
+width: 150px;
+margin: 30px;
+background-color: antiquewhite;
+box-sizing: 85px;
+padding: 74px;
+
+
+}
+.block1{
+-webkit-box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+-moz-box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+box-shadow: -2px -1px 10px 7px rgba(34, 60, 80, 0.44) inset;
+padding: 60px;
+overflow: auto;
+border-top-left-radius: 30px;
+border-bottom-left-radius:30px;
+
+}
