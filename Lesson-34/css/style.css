@@ -1,0 +1,23 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+ border-spacing: 0;
+ border-collapse: collapse;
+}
+
+.weekends{
+    color: red;
+}
+
+tr,
+td,
+caption,
+th{
+    border: 1px solid black;
+}
+
+caption{
+    border-bottom: none;
+}
