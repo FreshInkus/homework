@@ -1,0 +1,172 @@
+.hero {
+  padding-top: 80px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  z-index: -1;
+  bottom: 106px;
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  background: url(../images/decor-large-icon.svg) repeat-x;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero h1 {
+  margin-bottom: 40px;
+  font-family: Oswald, sans-serif;
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+
+.hero h1 strong {
+  font-weight: 600;
+  color: #3569ed;
+}
+
+.hero-info .text {
+  margin-bottom: 140px;
+  max-width: 440px;
+}
+
+.hero-images {
+  position: relative;
+  display: flex;
+}
+
+.hero-choose {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 163px;
+  padding: 22px;
+  border: 1px solid #535755;
+  background: #ffffffe6;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 140px;
+}
+
+.news-article {
+  max-width: 284px;
+  background-color: #fff;
+  border: 1px solid #d3cbd9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-article-img {
+  display: block;
+}
+
+.news-info {
+  padding: 20px 20px 0;
+  margin-bottom: 12px;
+}
+
+.news-date {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.news-article footer {
+  padding: 0 20px 20px;
+  margin-bottom: auto;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  color: #3596ed;
+}
+
+.news-link:hover::after {
+  transform: translateX(5px);
+}
+
+.news-link::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 9px;
+  background-image: url(../images/arrow-icon-right.svg);
+  transition: transform 0.2s;
+}
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.faq {
+  position: relative;
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  top: 215px;
+  z-index: -1;
+  width: calc(50% - 250px);
+  height: 40px;
+  background: url("../images/decor-large-icon.svg") repeat-x;
+}
+
+.faq-container {
+  display: flex;
+  gap: 28px;
+}
+
+details {
+  margin-bottom: 20px;
+  border-block: 1px solid #d3cbd9;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 22px;
+  background: url(../images/arrow-down-icon.svg) no-repeat center / cover;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details > p {
+  padding: 0 20px;
+}
