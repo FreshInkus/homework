@@ -1,0 +1,235 @@
+.goods__header {
+  margin-bottom: clamp(24px, 2.67vw, 36px);
+}
+
+.goods__title {
+  font-weight: 400;
+  font-size: clamp(28px, 3.11vw, 42px);
+  line-height: 125%;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.goods__text {
+  width: 100%;
+  max-width: 628px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.goods__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "laptop phones tablet"
+    "watch phones tablet";
+  grid-template-rows: minmax(0, 1.748fr) minmax(0, 1fr);
+  gap: clamp(32px, 5.333vw, 72px) 16px;
+  aspect-ratio: 1350 / 814;
+}
+
+.goods-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.goods-card--laptop {
+  grid-area: laptop;
+}
+
+.goods-card--watch {
+  grid-area: watch;
+}
+
+.goods-card--phones {
+  grid-area: phones;
+}
+
+.goods-card--tablet {
+  grid-area: tablet;
+}
+
+.goods-card__image {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.goods-card__content {
+  position: relative;
+  z-index: var(--layer-1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.goods-card__category {
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.goods-card__title {
+  max-width: 170px;
+  margin: 0;
+  font-size: clamp(20px, 1.65vw, 32px);
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.goods-card--laptop .goods-card__image {
+  bottom: 0;
+  left: 0;
+  width: min(84%, 470px);
+}
+
+.goods-card--laptop .goods-card__content {
+  justify-content: flex-end;
+  height: 100%;
+  padding: clamp(18px, 2.07vw, 28px) clamp(18px, 2.07vw, 28px) clamp(16px, 1.78vw, 24px) 50%;
+}
+
+.goods-card--watch .goods-card__image {
+  bottom: -50%;
+  left: 0;
+  width: auto;
+  height: 200%;
+}
+
+.goods-card--watch .goods-card__content {
+  justify-content: center;
+  height: 100%;
+  padding: clamp(16px, 1.78vw, 24px) clamp(18px, 2.07vw, 28px) clamp(16px, 1.78vw, 24px) 49%;
+}
+
+.goods-card--phones .goods-card__image {
+  top: 11%;
+  left: -43%;
+  width: 184%;
+}
+
+.goods-card--phones .goods-card__content,
+.goods-card--tablet .goods-card__content {
+  align-items: center;
+  padding: 46px 24px 24px;
+  text-align: center;
+}
+
+.goods-card--phones .goods-card__content {
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 98px;
+}
+
+.goods-card--tablet .goods-card__image {
+  right: -64%;
+  bottom: -3%;
+  width: 190%;
+}
+
+@media (width <= 1024px) {
+  .goods__grid {
+    aspect-ratio: auto;
+    min-height: clamp(530px, 68vw, 640px);
+  }
+
+  .goods-card--laptop .goods-card__content,
+  .goods-card--watch .goods-card__content {
+    padding-right: clamp(20px, 2.73vw, 28px);
+  }
+
+  .goods-card--phones .goods-card__content,
+  .goods-card--tablet .goods-card__content {
+    padding-inline: clamp(16px, 2.34vw, 24px);
+  }
+}
+
+@media (width <= 960px) {
+  .goods__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "laptop laptop"
+      "phones tablet"
+      "watch watch";
+    grid-template-rows: clamp(250px, 36vw, 300px) clamp(340px, 54vw, 420px) clamp(190px, 28vw, 230px);
+    min-height: 0;
+    gap: clamp(16px, 3vw, 24px);
+  }
+
+  .goods-card--laptop .goods-card__image {
+    width: min(70%, 430px);
+  }
+
+  .goods-card--watch .goods-card__image {
+    bottom: -50%;
+    height: 200%;
+  }
+
+  .goods-card--watch .goods-card__content {
+    padding-left: 38%;
+  }
+
+  .goods-card--phones .goods-card__image {
+    top: 15%;
+    left: -60%;
+    width: 220%;
+  }
+
+  .goods-card--tablet .goods-card__image {
+    right: -80%;
+    width: 230%;
+  }
+}
+
+@media (width <= 520px) {
+  .goods__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "laptop"
+      "watch"
+      "phones"
+      "tablet";
+    grid-template-rows: clamp(240px, 60vw, 300px) clamp(180px, 46vw, 230px) repeat(2, clamp(340px, 90vw, 420px));
+    gap: 16px;
+  }
+
+  .goods-card__title {
+    font-size: clamp(24px, 6vw, 28px);
+  }
+
+  .goods-card--laptop .goods-card__image {
+    width: min(85%, 360px);
+  }
+
+  .goods-card--watch .goods-card__image {
+    bottom: -50%;
+    height: 200%;
+  }
+
+  .goods-card--phones .goods-card__image {
+    left: -35%;
+    width: 160%;
+  }
+
+  .goods-card--tablet .goods-card__image {
+    right: -47%;
+    width: 165%;
+  }
+}
+
+@media (width <= 375px) {
+  .goods-card--phones .goods-card__content {
+    padding-bottom: 72px;
+  }
+}
