@@ -81,7 +81,7 @@ switch (true) {
 const username = prompt("Введите никнейм");
 const password = prompt("Введите пароль");
 const adminPanel =
-  username == `admin` && password === `123456`
+  username == `admin` || username == `user` && password === `123456`
     ? `Доступ разрешён`
     : `Доступ запрещён`;
 console.log(adminPanel);
