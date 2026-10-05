@@ -26,8 +26,11 @@
 
 // Задача 1
 
-function calculateFinalPrice(price, discount, taxInsert) {
-  return (price - discount)  * taxInsert + (price - discount);
+function calculateFinalPrice(price, discountPercent, taxInsert) {
+  const discount = price * (discountPercent / 100);
+  const discountPrise = price - discount;
+  const tax = discountPrise * taxInsert;
+  return discountPrise + tax;
 }
 
 console.log(calculateFinalPrice(100, 10, 0.2));
@@ -44,23 +47,25 @@ function checkAcces(userName, password) {
 
 function getTimeOfDay(time) {
   switch (true) {
-    case time < 5:
+    case time < 6:
       return "Ночь";
-    case time < 11:
+    case time < 12:
       return "Утро";
-    case time < 17:
+    case time < 18:
       return "День";
-    case time <= 23:
+    case time <= 24:
       return "Вечер";
     default:
       return "Некорректное время";
   }
 }
 
+console.log(getTimeOfDay(6))
+
 // Задача 4
 
 function findFirstEven(start, end) {
-  for (i = start; i <= end; i++) {
+  for (let i = start; i <= end; i++) {
     if (i % 2 == 0) {
       return i;
     }
