@@ -39,9 +39,13 @@ const person = {
 // Задача 2.
 
 function isEmpty(textTest) {
-  prompt("Введите данные");
-  return textTest == "";
+  for (let key in textTest) {
+    return false
+  }
+  return true
 }
+
+let textTest = {};
 
 /* console.log (isEmpty()) */
 
@@ -58,11 +62,16 @@ function cloneAndModify(object, modifications) {
 }
 console.log(cloneAndModify(task, { title: "Дойти до вордпресса" }));
 
+for (const key in task) {
+console.log(`${key}:`, task[key])
+}
+
+
 // Задача 4.
 
 function callAllMethods(obj) {
   for (let key in obj) {
-    typeof obj[key] === "function" ? obj[key]() : false
+    typeof obj[key] === "function" ? obj[key]() : false;
   }
 }
 
@@ -77,8 +86,6 @@ const myObject = {
 };
 callAllMethods(myObject);
 
-
-
-
+let test = {};
 
 // Было честно говоря сложно, пришлось подумать над 4 задачей а остальные вроде как сделал хорошо
