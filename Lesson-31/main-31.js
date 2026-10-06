@@ -53,7 +53,7 @@ function getTimeOfDay(time) {
       return "Утро";
     case time < 18:
       return "День";
-    case time <= 24:
+    case time <= 23:
       return "Вечер";
     default:
       return "Некорректное время";
