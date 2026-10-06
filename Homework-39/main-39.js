@@ -86,6 +86,8 @@ const myObject = {
 };
 callAllMethods(myObject);
 
+const modifiedTask = cloneAndModify(task, { title: "Дойти до вордпресса" });
+
 let test = {};
 
 // Было честно говоря сложно, пришлось подумать над 4 задачей а остальные вроде как сделал хорошо
